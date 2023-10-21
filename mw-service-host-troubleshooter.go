@@ -203,7 +203,7 @@ func extractUsername(fullUsername string) string {
 	return fullUsername
 }
 
-// Yunction to detect folder size.
+// Function to detect folder size.
 func getFolderSize(folderPath string) (int64, error) {
 	var folderSize int64
 
