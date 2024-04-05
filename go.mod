@@ -3,6 +3,7 @@ module github.com/Jestzer/MWServiceHost.Troubleshooter
 go 1.21.3
 
 require (
+	github.com/chzyer/readline v1.5.1
 	github.com/fatih/color v1.15.0 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
