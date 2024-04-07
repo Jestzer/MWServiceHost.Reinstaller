@@ -27,6 +27,21 @@ func main() {
 	var serviceHostFolderExists bool
 	var matlabConnectorFolderExists bool
 
+	// Don't hate me.
+	switch userOS := runtime.GOOS; userOS {
+	case "darwin":
+		fmt.Println(redText("Sorry, macOS is currently unsupported. :("))
+		os.Exit(1)
+	case "windows":
+		// scrub
+	case "linux":
+		fmt.Println(redText("Sorry, Linux is currently unsupported. :("))
+		os.Exit(1)
+	default:
+		fmt.Print(redText("\nYour operating system is unrecognized. Exiting."))
+		os.Exit(1)
+	}
+
 	// Use readline to make text input not suck so much.
 	rl, err := readline.New("> ")
 	if err != nil {
